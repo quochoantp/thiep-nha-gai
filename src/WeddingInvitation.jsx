@@ -13,6 +13,7 @@ import SaveTheDate from './components/SaveTheDate'
 import Closing from './components/Closing'
 import Gift, { GiftModal } from './components/Gift'
 import { BottomBar, Lightbox, MusicButton } from './components/Controls'
+import useAutoScroll from './utils/useAutoScroll'
 
 /**
  * Thiệp cưới. Nhận 3 nguồn dữ liệu qua props:
@@ -28,6 +29,15 @@ export default function WeddingInvitation({ content, images, audio }) {
   const [playing, setPlaying] = useState(false)
   const [giftOpen, setGiftOpen] = useState(false)
   const [lightbox, setLightbox] = useState(null)
+
+  const auto = content.autoScroll || {}
+  useAutoScroll({
+    active: auto.enabled !== false && opened,
+    paused: giftOpen || !!lightbox,
+    speed: auto.speed,
+    delay: auto.delay,
+    resumeAfter: auto.resumeAfter,
+  })
 
   const hasAudio = !!(audio && audio.enabled && audio.src)
   const coupleNames = content.couple.map((k) => content[k].name).join(' & ')

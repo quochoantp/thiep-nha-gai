@@ -32,6 +32,14 @@ const content = {
     button: 'Mở thiệp',
   },
 
+  // ---------- Tự cuộn thiệp từ đầu đến cuối sau khi mở ----------
+  autoScroll: {
+    enabled: true,
+    speed: 45, // điểm ảnh mỗi giây (càng lớn càng nhanh)
+    delay: 3000, // chờ bao lâu sau khi mở thiệp mới bắt đầu cuộn (ms)
+    resumeAfter: 4000, // khách tự cuộn/chạm thì dừng, để yên bấy nhiêu ms sẽ chạy tiếp
+  },
+
   // ---------- 1. Bìa ----------
   hero: {
     // Thứ tự tên dưới ảnh bìa, khớp vị trí trong ảnh: chú rể bên trái, cô dâu bên phải
