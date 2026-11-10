@@ -34,6 +34,8 @@ const content = {
 
   // ---------- 1. Bìa ----------
   hero: {
+    // Thứ tự tên dưới ảnh bìa, khớp vị trí trong ảnh: chú rể bên trái, cô dâu bên phải
+    couple: ['groom', 'bride'],
     topWords: ['YOU ARE', 'THE LOVE OF', 'MY LIFE'],
     title: ['We got', 'married'],
     subtitle: "It's been a long time, see you at the wedding!",
@@ -82,11 +84,6 @@ const content = {
     venueName: 'Tư gia nhà gái',
     address: 'Thôn An Thịnh, Xã Đông Tiền Hải, Tỉnh Hưng Yên',
     welcome: 'Rất hân hạnh được đón tiếp!',
-    // Bản đồ: ghi địa chỉ/tên địa điểm để nhúng Google Maps
-    mapQuery: 'Thôn An Thịnh, Xã Đông Tiền Hải, Tỉnh Hưng Yên',
-    // Link mở chỉ đường (để trống sẽ tự tạo từ mapQuery)
-    mapLink: '',
-    directionsButton: 'Chỉ đường',
   },
 
   // ---------- Timeline ngày cưới ----------

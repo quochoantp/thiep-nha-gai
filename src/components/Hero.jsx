@@ -6,6 +6,8 @@ export default function Hero({ started }) {
   const { content, images } = useInvitation()
   const { hero } = content
   const couple = content.couple.map((k) => content[k])
+  // Tên dưới ảnh bìa xếp theo vị trí người trong ảnh (chú rể trái, cô dâu phải)
+  const heroCouple = (hero.couple || content.couple).map((k) => content[k])
   const date = parseDate(content.wedding.date)
 
   return (
@@ -31,7 +33,7 @@ export default function Hero({ started }) {
       </div>
 
       <div className="hero-couple">
-        {couple.map((p, i) => (
+        {heroCouple.map((p, i) => (
           <Reveal key={p.label} className="hero-person" effect="up" delay={i * 150}>
             <span className="deco hero-label">{p.label}</span>
             <span className="thin hero-name">{p.name}</span>

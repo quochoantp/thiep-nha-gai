@@ -1,13 +1,11 @@
 import { useInvitation } from '../context'
 import { dotted, parseDate, weekdayUpper } from '../utils/date'
-import { Icon, Lines, Reveal } from './ui'
+import { Lines, Reveal } from './ui'
 
 export default function Venue() {
   const { content } = useInvitation()
   const inv = content.invitation
   const date = parseDate(content.wedding.date)
-  const embed = 'https://www.google.com/maps?q=' + encodeURIComponent(inv.mapQuery) + '&output=embed'
-  const link = inv.mapLink || 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(inv.mapQuery)
 
   return (
     <section className="venue">
@@ -41,13 +39,6 @@ export default function Venue() {
             {inv.welcome}
           </Reveal>
         </div>
-
-        <Reveal className="venue-map" effect="up">
-          <iframe title="Bản đồ" src={embed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-          <a className="btn btn-dark" href={link} target="_blank" rel="noreferrer">
-            <Icon name="pin" size={16} /> {inv.directionsButton}
-          </a>
-        </Reveal>
       </div>
     </section>
   )
