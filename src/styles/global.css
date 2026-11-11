@@ -735,12 +735,10 @@ section {
   pointer-events: none;
 }
 .love-cutout img {
+  display: block;
   width: 100%;
-  /* viền trắng quanh ảnh tách nền */
-  filter:
-    drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff)
-    drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff)
-    drop-shadow(0 10px 18px rgba(0, 0, 0, 0.15));
+  /* Viền trắng + bóng đổ đã vẽ sẵn trong ảnh (CSS drop-shadow làm Chrome
+     hiện vệt bóng chữ nhật quanh ảnh) */
 }
 .love-text {
   position: relative;

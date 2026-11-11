@@ -12,8 +12,8 @@
  *  bride.jpg         Ảnh cô dâu (dọc ~ 2:3)
  *  film-1/2/3.jpg    3 khung trong dải phim (ngang ~ 3:2)
  *  love-main.jpg     Ảnh lớn phần "MY LOVE" (dọc ~ 3:4)
- *  love-cutout.webp  Ảnh cặp đôi ĐÃ TÁCH NỀN (PNG trong suốt) — viền trắng
- *                    được tự tạo bằng CSS. Có thể tách nền miễn phí tại
+ *  love-cutout.webp  Ảnh cặp đôi ĐÃ TÁCH NỀN, viền trắng + bóng vẽ sẵn trong ảnh
+ *                    (ảnh thay thế cần tự có viền). Có thể tách nền miễn phí tại
  *                    remove.bg hoặc ứng dụng Ảnh trên iPhone (nhấn giữ chủ thể).
  *  details.jpg       Ảnh chi tiết (nhẫn, giày, hoa) cạnh Timeline (dọc 4:5)
  *  duo-1.jpg        Ảnh ngang trên hàng chữ "FALL IN LOVE WEDDING" thứ hai
