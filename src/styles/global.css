@@ -565,6 +565,30 @@ section {
   font-weight: 500;
   font-size: 18px;
 }
+/* Ảnh chi tiết (nhẫn, giày, hoa) — khung viền mảnh màu rượu lệch nhẹ */
+.timeline-photo {
+  position: relative;
+  width: min(78%, 340px);
+  margin: 56px auto 14px;
+}
+.timeline-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translate(14px, 14px);
+  border: 1px solid var(--wine);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.timeline-photo img {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  cursor: zoom-in;
+  box-shadow: 0 18px 40px -22px rgba(60, 20, 30, 0.55);
+}
 
 /* =============================================================
    5. DẢI PHIM + ĐẾM NGƯỢC
@@ -1186,6 +1210,15 @@ section {
   /* Dải phim nằm ngang */
   .film-dark { padding: 50px 0 60px; }
   .film-strip { grid-template-columns: 44px 1fr 44px; padding: 0 var(--gutter); }
+  /* Timeline: ảnh chi tiết bên trái, lịch trình bên phải */
+  .timeline-grid.has-photo {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 70px;
+    align-items: center;
+  }
+  .timeline-grid.has-photo .timeline-photo { order: -1; width: min(100%, 400px); margin: 0 0 0 auto; }
+
   .film-frames { grid-template-columns: repeat(3, 1fr); gap: 10px; }
   .film-frame { aspect-ratio: 4 / 4.6; }
   .countdown { margin-top: 50px; }

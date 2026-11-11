@@ -15,7 +15,8 @@
  *  love-cutout.webp  Ảnh cặp đôi ĐÃ TÁCH NỀN (PNG trong suốt) — viền trắng
  *                    được tự tạo bằng CSS. Có thể tách nền miễn phí tại
  *                    remove.bg hoặc ứng dụng Ảnh trên iPhone (nhấn giữ chủ thể).
- *  duo-1.jpg         Ảnh ngang trên hàng chữ "FALL IN LOVE WEDDING" thứ hai
+ *  details.jpg       Ảnh chi tiết (nhẫn, giày, hoa) cạnh Timeline (dọc 4:5)
+ *  duo-1.jpg        Ảnh ngang trên hàng chữ "FALL IN LOVE WEDDING" thứ hai
  *  duo-2.jpg         Ảnh ngang dưới hàng chữ đó
  *  calendar.jpg      Ảnh trong khung polaroid có lịch (dọc ~ 4:5)
  *  closing.jpg       Ảnh "SWEET WEDDING INVITATION" (dọc ~ 3:4)
@@ -33,6 +34,7 @@ import film2 from './film-2.jpg'
 import film3 from './film-3.jpg'
 import loveMain from './love-main.jpg'
 import loveCutout from './love-cutout.webp'
+import details from './details.jpg'
 import duo1 from './duo-1.jpg'
 import duo2 from './duo-2.jpg'
 import calendar from './calendar.jpg'
@@ -50,6 +52,7 @@ const images = {
   film: [film1, film2, film3],
   loveMain,
   loveCutout,
+  details,
   duo: [duo1, duo2],
   calendar,
   closing,
